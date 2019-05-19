@@ -3,3 +3,21 @@
 </div>
 
 TBD
+
+# Layer
+
+## Data Layer
+
+- Entities
+- Store (vuex)
+
+## Domain Layer
+
+- UseCases
+
+## Presentaion Layer
+
+- Presenter
+- view
+  - pages
+  - components
