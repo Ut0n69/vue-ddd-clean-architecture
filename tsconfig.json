@@ -16,7 +16,7 @@
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "src/client/*"
       ]
     },
     "lib": [
