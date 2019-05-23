@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm-run-all -p dev:*",
     "dev:client": "vue-cli-service serve src/client/main.ts",
-    "dev:server": "ts-node src/server/index.ts",
+    "dev:server": "nodemon",
     "build": "npm-run-all -p rm build:*",
     "build:client": "vue-cli-service build src/client/main.ts",
     "build:server": "tsc -p tsconfig.server.json",
@@ -37,6 +37,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.5",
+    "nodemon": "^1.19.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.3",
     "ts-jest": "^23.0.0",
