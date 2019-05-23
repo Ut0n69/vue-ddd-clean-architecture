@@ -16,5 +16,6 @@ module.exports = {
     inline: true,
     hot: true,
     progress: true
-  }
+  },
+  outputDir: 'dist/client'
 }

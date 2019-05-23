@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve src/client/main.ts",
-    "build": "vue-cli-service build src/client/main.ts",
+    "dev": "npm-run-all -p dev:*",
+    "dev:client": "vue-cli-service serve src/client/main.ts",
+    "dev:server": "ts-node src/server/index.ts",
+    "build": "npm-run-all -p rm build:*",
+    "build:client": "vue-cli-service build src/client/main.ts",
+    "build:server": "tsc -p tsconfig.server.json",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "rm": "rimraf dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -32,8 +37,11 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
     "ts-jest": "^23.0.0",
-    "typescript": "^3.4.3",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5",
     "vue-template-compiler": "^2.5.21"
   },
   "gitHooks": {
